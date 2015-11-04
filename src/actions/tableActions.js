@@ -6,8 +6,8 @@ const apiProps = {
   url: CONSTS.USDA_NUTRIENTS_URL_WITH_APIKEY +
     nutrientSep + CONSTS.NUTRIENTS.join(nutrientSep),
   types: {
-    request: CONSTS.ACTIONS.REQUEST_COUNTRYRCPT,
-    receive: CONSTS.ACTIONS.RECEIVE_COUNTRYRCPT
+    request: CONSTS.ACTIONS.REQUEST_NUTRIENTS_DATA,
+    receive: CONSTS.ACTIONS.RECEIVE_NUTRIENTS_DATA
   }
 }
 
@@ -25,14 +25,14 @@ function fetchData () {
 
 function filterBy (filterString) {
   return {
-    type: CONSTS.ACTIONS.FILTER_COUNTRYRCPT,
+    type: CONSTS.ACTIONS.FILTER_NUTRIENTS_DATA,
     filterString
   }
 }
 
 function sortBy (sortKey) {
   return {
-    type: CONSTS.ACTIONS.SORT_COUNTRYRCPT,
+    type: CONSTS.ACTIONS.SORT_NUTRIENTS_DATA,
     sortKey
   }
 }

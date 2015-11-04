@@ -8,10 +8,10 @@ export default {
     'api_key=uFKMsZENr1ZUZEIDu5CYzA8UeVERm57BEZj2jBK1',
 
   ACTIONS: keymirror({
-    REQUEST_COUNTRYRCPT: null,
-    RECEIVE_COUNTRYRCPT: null,
-    FILTER_COUNTRYRCPT: null,
-    SORT_COUNTRYRCPT: null,
+    REQUEST_NUTRIENTS_DATA: null,
+    RECEIVE_NUTRIENTS_DATA: null,
+    FILTER_NUTRIENTS_DATA: null,
+    SORT_NUTRIENTS_DATA: null,
 
     SET_ERROR_MESSAGE: null,
     RESET_ERROR_MESSAGE: null

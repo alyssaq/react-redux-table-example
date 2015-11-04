@@ -11,18 +11,17 @@ function preprocessData (data) {
 
 function handleTableActions (state, action) {
   switch (action.type) {
-    case ACTIONS.REQUEST_COUNTRYRCPT:
+    case ACTIONS.REQUEST_NUTRIENTS_DATA:
       return { isFetching: true }
-    case ACTIONS.RECEIVE_COUNTRYRCPT:
-      console.log(preprocessData(action.data))
+    case ACTIONS.RECEIVE_NUTRIENTS_DATA:
       return {
         isFetching: false,
         data: preprocessData(action.data)
       }
-    case ACTIONS.FILTER_COUNTRYRCPT:
+    case ACTIONS.FILTER_NUTRIENTS_DATA:
       console.log(action.filterString)
       return { filterString: action.filterString.toLowerCase() }
-    case ACTIONS.SORT_COUNTRYRCPT:
+    case ACTIONS.SORT_NUTRIENTS_DATA:
       return {
         sortKey: action.sortKey,
         sortDesc: state.sortKey === action.sortKey ? !state.sortDesc : false
@@ -34,10 +33,10 @@ function handleTableActions (state, action) {
 
 function tableReducers (state = {}, action) {
   switch (action.type) {
-    case ACTIONS.REQUEST_COUNTRYRCPT:
-    case ACTIONS.RECEIVE_COUNTRYRCPT:
-    case ACTIONS.FILTER_COUNTRYRCPT:
-    case ACTIONS.SORT_COUNTRYRCPT:
+    case ACTIONS.REQUEST_NUTRIENTS_DATA:
+    case ACTIONS.RECEIVE_NUTRIENTS_DATA:
+    case ACTIONS.FILTER_NUTRIENTS_DATA:
+    case ACTIONS.SORT_NUTRIENTS_DATA:
       return Object.assign({}, state, handleTableActions(state, action))
     default:
       return state
