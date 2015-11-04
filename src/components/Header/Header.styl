@@ -1,0 +1,30 @@
+$logo-url = url('//cdn4.iconfinder.com/data/icons/eldorado-food-1/40/strawberry-512.png')
+
+header
+  display flex
+  background rgba(255, 255, 255, .95)
+  top 0
+  left 0
+  right 0
+  height 4em
+  border-bottom 1px solid rgba(0, 0, 0, .1)
+  z-index 200
+  padding .75em 2em
+
+  > strong
+    flex 1 1 40%
+
+    a
+      font-size 1.75em
+      background transparent $logo-url no-repeat left top
+      background-size 1.25em
+      padding 0.1em 0em 0.1em 1.4em
+      color #333 !important
+      letter-spacing -0.05em
+      opacity .5
+      font-weight 100
+
+  > nav
+    flex 1 1 60%
+    align-self center
+    text-align right

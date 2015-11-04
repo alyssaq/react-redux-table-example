@@ -1,0 +1,131 @@
+@require('../vars.styl')
+
+html
+  background #fff
+  height 100%
+
+body
+  font-size 16px
+  font-weight 300
+  font-family 'Myriad Set', 'Lucida Grande', 'Lucida Sans Unicode', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  color $font-color
+  line-height 1.333333
+  height 100%
+  margin 0
+
+.center
+  text-align center
+
+main
+  padding 1.5em 1.5em 0em 1.5em
+*
+  &,
+  &:after,
+  &:before
+    box-sizing border-box
+
+a
+  &,
+  &:visited,
+  &:hover
+    text-decoration none
+    color $link-color
+
+input, textarea, select, a, button, :focus
+  outline none
+  outline-style none
+  box-shadow none
+  border-color transparent
+
+.error
+  color $error-color
+  background-color $error-background-color
+  padding 10px
+
+  .close
+    float right
+    font-size xx-large
+    margin-top -10px
+    cursor pointer
+
+
+.filter-input
+  padding 0.25em
+  margin 0 auto
+  font-size 14px
+  border solid 1px $light-border-color
+  border-bottom solid 2px $light-border-color
+  transition border 0.3s
+
+.filter-input:focus
+  border solid 1px $light-border-color
+  border-bottom solid 2px $dark-border-color
+
+/* Jumping box loader */
+.loader-box, .boxMsg
+  position absolute
+  left 50%
+  top 50%
+  margin -50px
+
+.loader-box
+  width 50px
+  height 50px
+  &:before
+    content ''
+    width 50px
+    height 5px
+    background #000
+    opacity 0.1
+    position absolute
+    top 59px
+    left 0
+    border-radius 50%
+    animation shadow .5s linear infinite
+
+  &:after
+    content ''
+    width 50px
+    height 50px
+    background #1a3668
+    animation animate .5s linear infinite
+    position absolute
+    top 0
+    left 0
+    border-radius 3px
+
+@keyframes animate
+  17%
+    border-bottom-right-radius 3px
+  25%
+    transform translateY(9px) rotate(22.5deg)
+  50%
+    transform translateY(18px) scale(1, .9) rotate(45deg)
+    border-bottom-right-radius 40px
+  75%
+    transform translateY(9px) rotate(67.5deg)
+  100%
+    transform translateY(0) rotate(90deg)
+
+@keyframes shadow
+  0%, 100%
+    transform scale(1, 1)
+  50%
+    transform scale(1.2, 1)
+
+@keyframes spinner
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(360deg)
+
+/* :not(:required) hides this rule from IE9 and below */
+.spinner:not(:required)
+  animation spinner 1500ms infinite linear
+  border-radius 0.5em
+  box-shadow rgba(0, 0, 51, 0.3) 1.5em 0 0 0, rgba(0, 0, 51, 0.3) 1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) 0 1.5em 0 0, rgba(0, 0, 51, 0.3) -1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) -1.5em 0 0 0, rgba(0, 0, 51, 0.3) -1.1em -1.1em 0 0, rgba(0, 0, 51, 0.3) 0 -1.5em 0 0, rgba(0, 0, 51, 0.3) 1.1em -1.1em 0 0
+  margin 0 auto
+  font-size 5px
+  width 1em
+  height 1em
+  overflow hidden
