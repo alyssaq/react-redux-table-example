@@ -1,5 +1,7 @@
 # React Redux Table Example
 
+Demo: <http://react-redux-table.surge.sh>
+
 Features:
 
  * [React](https://facebook.github.io/react)-[Redux](http://redux.js.orgr) data flow
