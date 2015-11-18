@@ -8,11 +8,11 @@ class AboutPage extends React.Component {
       <div className='about'>
         <h2> About </h2>
         <p>
-          This example app serves as a boilerplate for my re-occurring use-case: <br/>
+          This example app serves as a boilerplate for my recurring use case: <br/>
           <ol>
-            <li> Request data from multiple APIs</li>
+            <li> Request data from multiple APIs </li>
             <li> Transform/merge the data </li>
-            <li> Display and interact in the UI </li>
+            <li> Display and interact via the UI </li>
           </ol>
         </p>
         <p>
