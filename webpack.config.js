@@ -37,6 +37,20 @@ var plugins = [
   new webpack.optimize.DedupePlugin()
 ]
 
+var babelLoader = {
+  loader: 'babel-loader',
+  include: [
+    path.resolve(__dirname, 'src'),
+  ],
+  test: /\.jsx?$/,
+  // Options to configure babel
+  query: {
+    cacheDirectory: true,
+    plugins: ['transform-runtime'],
+    presets: ['es2015', 'stage-0', 'react'],
+  }
+}
+
 var production = {
   devtool: 'eval',
 
@@ -58,11 +72,7 @@ var production = {
 
   module: {
     loaders: [].concat(
-      assetsLoaders, {
-        test: /\.jsx?$/,
-        loader: 'babel',
-        exclude: /node_modules/
-      }
+      assetsLoaders, babelLoader
     )
   },
 
@@ -98,9 +108,9 @@ var development = {
     loaders: [].concat(
       assetsLoaders, {
         test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel'],
+        loaders: ['react-hot'],
         include: path.join(__dirname, 'src')
-      }
+      }, babelLoader
     ),
     preLoaders: [].concat(lintLoader)
   },

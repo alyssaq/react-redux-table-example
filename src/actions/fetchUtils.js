@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch'
-import { ACTIONS } from '../constants'
+import CONSTS from '../constants'
 
 function handleResponse (response) {
   if (response.status >= 200 && response.status < 300) {
@@ -15,7 +15,7 @@ function formatErrorMessage (res) {
 // Error action that is dispatched on failed fetch requests
 function errorAction (error) {
   return {
-    type: ACTIONS.SET_ERROR_MESSAGE,
+    type: CONSTS.ACTIONS.SET_ERROR_MESSAGE,
     error: true,
     errorMessage: error.message
   }

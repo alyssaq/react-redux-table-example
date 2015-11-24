@@ -1,11 +1,11 @@
-import { ACTIONS } from '../constants'
+import CONSTS from '../constants'
 import tableActions from './tableActions'
 
 function resetErrorMessage () {
-  return { type: ACTIONS.RESET_ERROR_MESSAGE }
+  return { type: CONSTS.ACTIONS.RESET_ERROR_MESSAGE }
 }
 
-export default {
+export {
   tableActions,
   resetErrorMessage
 }

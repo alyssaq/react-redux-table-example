@@ -1,5 +1,5 @@
 import { routerStateReducer as router } from 'redux-router'
-import { ACTIONS } from '../constants'
+import CONSTS from '../constants'
 import { combineReducers } from 'redux'
 import table from './tableReducer'
 
@@ -7,7 +7,7 @@ import table from './tableReducer'
 function errorMessage (state = {}, action) {
   const { type, error } = action
 
-  if (type === ACTIONS.RESET_ERROR_MESSAGE) {
+  if (type === CONSTS.ACTIONS.RESET_ERROR_MESSAGE) {
     return null
   } else if (error) {
     return action.errorMessage

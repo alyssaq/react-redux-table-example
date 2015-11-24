@@ -6,15 +6,13 @@ class AboutPage extends React.Component {
   render () {
     return (
       <div className='about'>
-        <h2> About </h2>
-        <p>
-          This example app serves as a boilerplate for my recurring use case: <br/>
-          <ol>
-            <li> Request data from multiple APIs </li>
-            <li> Transform/merge the data </li>
-            <li> Display and interact via the UI </li>
-          </ol>
-        </p>
+        <h1> About </h1>
+        This example app serves as a boilerplate for my recurring use case: <br/>
+        <ol>
+          <li> Request data from multiple APIs </li>
+          <li> Transform/merge the data </li>
+          <li> Display and interact via the UI </li>
+        </ol>
         <p>
           With the app development flow out-of-the-way,
           I can focus on the data analytics and D3 visualisations.
