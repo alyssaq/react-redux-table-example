@@ -1,5 +1,4 @@
-import CONSTS from '../constants'
-const ACTIONS = CONSTS.ACTIONS
+import { ACTIONS } from '../constants'
 
 function preprocessData (data) {
   const foods = data.report.foods
