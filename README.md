@@ -4,7 +4,7 @@ Demo: <http://react-redux-table.surge.sh>
 
 Features:
 
- * [React](https://facebook.github.io/react)-[Redux](http://redux.js.orgr) data flow
+ * [React](https://facebook.github.io/react)-[Redux](http://redux.js.org) data flow
  * Fetch JSON from an API and render into a table
  * Filter and sort data in the table
  * Routing with [react-router](https://github.com/rackt/react-router) and [redux-router](https://github.com/rackt/redux-router)
