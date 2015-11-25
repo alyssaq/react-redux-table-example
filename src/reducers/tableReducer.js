@@ -19,7 +19,6 @@ function handleTableActions (state, action) {
         data: preprocessData(action.data)
       }
     case ACTIONS.FILTER_NUTRIENTS_DATA:
-      console.log(action.filterString)
       return { filterString: action.filterString.toLowerCase() }
     case ACTIONS.SORT_NUTRIENTS_DATA:
       return {
