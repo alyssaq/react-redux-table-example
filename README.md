@@ -10,7 +10,7 @@ Features:
  * Routing with [react-router](https://github.com/rackt/react-router) and [redux-router](https://github.com/rackt/redux-router)
  * Redux middlewares
  * Separate reducers and actions 
- * ES6/ES7 with [babeljs](https://babeljs.io)
+ * ES6/ES7 with [babeljs](https://babeljs.io) (es2015, stage-0, react)
  * [Stylus](http://learnboost.github.io/stylus)
  * [Webpack](https://webpack.github.io) dev and production
  * Eslint [standard](http://standardjs.com)
