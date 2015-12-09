@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.sd.apple.com/code.edge.apple.com/cdnportal"
+    "url": "https://github.com/alyssaq/react-redux-table-example"
   },
   "license": "MIT",
   "scripts": {
@@ -20,19 +20,19 @@
     "test:cov": "node ./node_modules/karma/bin/karma start ./karma.conf.js --reporters coverage"
   },
   "dependencies": {
-    "babel-runtime": "^6.2.0",
+    "babel-runtime": "^6.3.13",
     "body-parser": "^1.14.1",
     "compression": "^1.6.0",
     "express": "^4.13.3",
     "fixed-data-table": "^0.6.0",
-    "history": "^1.13.1",
+    "history": "^1.15.0",
     "isomorphic-fetch": "^2.2.0",
     "keymirror": "^0.1.1",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
-    "react-router": "^1.0.0",
+    "react-router": "^1.0.2",
     "redux": "^3.0.4",
     "redux-logger": "^2.0.4",
     "redux-router": "^1.0.0-beta4",
@@ -44,10 +44,10 @@
     "babel-eslint": "^4.1.6",
     "babel-loader": "^6.2.0",
     "babel-plugin-add-module-exports": "^0.1.1",
-    "babel-plugin-transform-runtime": "^6.1.18",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
-    "babel-preset-stage-0": "^6.1.18",
+    "babel-plugin-transform-runtime": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
     "chai": "^3.4.1",
     "css-loader": "^0.23.0",
     "eslint": "^1.10.1",
