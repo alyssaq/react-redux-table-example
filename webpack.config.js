@@ -40,14 +40,14 @@ var plugins = [
 var babelLoader = {
   loader: 'babel-loader',
   include: [
-    path.resolve(__dirname, 'src'),
+    path.resolve(__dirname, 'src')
   ],
   test: /\.jsx?$/,
   // Options to configure babel
   query: {
     cacheDirectory: true,
     plugins: ['transform-runtime', 'babel-plugin-add-module-exports'],
-    presets: ['es2015', 'stage-0', 'react'],
+    presets: ['es2015', 'stage-0', 'react']
   }
 }
 
