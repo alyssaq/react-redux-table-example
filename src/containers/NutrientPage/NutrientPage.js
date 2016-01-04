@@ -1,4 +1,3 @@
-import './NutrientPage.styl'
 import React from 'react'
 import NutrientTable from '../../components/NutrientTable'
 import { connect } from 'react-redux'

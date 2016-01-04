@@ -1,7 +1,22 @@
 import React from 'react'
-import { Column } from 'fixed-data-table'
+import { Column, Cell } from 'fixed-data-table'
 import ResponsiveTableWrapper from '../ResponsiveTableWrapper'
 import renderers from '../../modules/renderers'
+
+// Stateless cell components for Table component
+function SortHeaderCell ({children, columnKey, ...props}) {
+  return (
+    <Cell {...props}>
+      <a onClick={() => props.sortBy(columnKey)}>
+        {children} {renderers.renderSortArrow(props, columnKey)}
+      </a>
+    </Cell>
+  )
+}
+
+function DataCell ({data, rowIndex, columnKey, ...props}) {
+  return <Cell {...props}> {data[rowIndex][columnKey]} </Cell>
+}
 
 class NutrientTable extends React.Component {
   constructor (props) {
@@ -82,30 +97,29 @@ class NutrientTable extends React.Component {
         <ResponsiveTableWrapper
           rowHeight={50}
           headerHeight={50}
-          rowGetter={(i) => data[i]}
           rowsCount={data.length}>
           <Column
-            label={'Food' + renderers.renderSortArrow(this.props, 'food')}
-            dataKey='food'
-            headerRenderer={::this.handleSortClick}
+            columnKey='food'
+            header={<SortHeaderCell {...this.props}> Food </SortHeaderCell>}
+            cell={<DataCell data={data}/>}
             flexGrow={3}
             width={100} />
           <Column
-            label={'Nutrient' + renderers.renderSortArrow(this.props, 'nutrient')}
-            dataKey='nutrient'
-            headerRenderer={::this.handleSortClick}
+            columnKey='nutrient'
+            header={<SortHeaderCell {...this.props}> Nutrient </SortHeaderCell>}
+            cell={<DataCell data={data}/>}
             flexGrow={1}
             width={100} />
           <Column
-            label={'Value' + renderers.renderSortArrow(this.props, 'value')}
-            dataKey='value'
-            headerRenderer={::this.handleSortClick}
+            columnKey='value'
+            header={<SortHeaderCell {...this.props}> Value </SortHeaderCell>}
+            cell={<DataCell data={data}/>}
             flexGrow={0.5}
             width={100} />
           <Column
-            label={'Unit' + renderers.renderSortArrow(this.props, 'unit')}
-            dataKey='unit'
-            headerRenderer={::this.handleSortClick}
+            columnKey='unit'
+            header={<SortHeaderCell {...this.props}> Unit </SortHeaderCell>}
+            cell={<DataCell data={data}/>}
             flexGrow={0.1}
             width={100} />
         </ResponsiveTableWrapper>
