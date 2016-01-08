@@ -5,10 +5,6 @@ import { bindActionCreators } from 'redux'
 import { tableActions as actions } from '../../actions'
 
 class NutrientPage extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     return (
       <div>
