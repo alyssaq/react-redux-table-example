@@ -5,10 +5,6 @@ import Header from '../../components/Header'
 import { resetErrorMessage } from '../../actions'
 
 class App extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   static propTypes = {
     // Injected by React Redux
     errorMessage: React.PropTypes.any,

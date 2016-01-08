@@ -19,10 +19,6 @@ function DataCell ({data, rowIndex, columnKey, ...props}) {
 }
 
 class NutrientTable extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   static propTypes = {
     // actions
     fetchData: React.PropTypes.func.isRequired,
