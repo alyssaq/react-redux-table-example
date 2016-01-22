@@ -30,16 +30,8 @@ function handleTableActions (state, action) {
   }
 }
 
-function tableReducers (state = {}, action) {
-  switch (action.type) {
-    case ACTIONS.REQUEST_NUTRIENTS_DATA:
-    case ACTIONS.RECEIVE_NUTRIENTS_DATA:
-    case ACTIONS.FILTER_NUTRIENTS_DATA:
-    case ACTIONS.SORT_NUTRIENTS_DATA:
-      return Object.assign({}, state, handleTableActions(state, action))
-    default:
-      return state
-  }
+function tableReducer (state = {}, action) {
+  return Object.assign({}, state, handleTableActions(state, action))
 }
 
-export default tableReducers
+export default tableReducer
