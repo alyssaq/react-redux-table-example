@@ -19,20 +19,6 @@ function DataCell ({data, rowIndex, columnKey, ...props}) {
 }
 
 class NutrientTable extends React.Component {
-  static propTypes = {
-    // actions
-    fetchData: React.PropTypes.func.isRequired,
-    sortBy: React.PropTypes.func.isRequired,
-    filterBy: React.PropTypes.func.isRequired,
-
-    // state data
-    data: React.PropTypes.array.isRequired,
-    filterString: React.PropTypes.string.isRequired,
-    sortKey: React.PropTypes.string.isRequired,
-    sortDesc: React.PropTypes.bool.isRequired,
-    isFetching: React.PropTypes.bool.isRequired
-  }
-
   componentWillMount () {
     this.props.fetchData()
   }
@@ -122,6 +108,20 @@ class NutrientTable extends React.Component {
       </div>
     )
   }
+}
+
+NutrientTable.propTypes = {
+  // actions
+  fetchData: React.PropTypes.func.isRequired,
+  sortBy: React.PropTypes.func.isRequired,
+  filterBy: React.PropTypes.func.isRequired,
+
+  // state data
+  data: React.PropTypes.array.isRequired,
+  filterString: React.PropTypes.string.isRequired,
+  sortKey: React.PropTypes.string.isRequired,
+  sortDesc: React.PropTypes.bool.isRequired,
+  isFetching: React.PropTypes.bool.isRequired
 }
 
 export default NutrientTable

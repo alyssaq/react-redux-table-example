@@ -5,14 +5,6 @@ import Header from '../../components/Header'
 import { resetErrorMessage } from '../../actions'
 
 class App extends React.Component {
-  static propTypes = {
-    // Injected by React Redux
-    errorMessage: React.PropTypes.any,
-    resetErrorMessage: React.PropTypes.func,
-    // Injected by React Router
-    children: React.PropTypes.node
-  }
-
   handleDismissClick (e) {
     e.preventDefault()
     this.props.resetErrorMessage()
@@ -44,6 +36,14 @@ class App extends React.Component {
       </div>
     )
   }
+}
+
+App.propTypes = {
+  // Injected by React Redux
+  errorMessage: React.PropTypes.any,
+  resetErrorMessage: React.PropTypes.func,
+  // Injected by React Router
+  children: React.PropTypes.node
 }
 
 function mapStateToProps (state) {
