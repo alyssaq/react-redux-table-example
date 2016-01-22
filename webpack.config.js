@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var autoprefixer = require('autoprefixer')
 var embedFileSize = 65536
 
 var output = {
@@ -9,8 +10,8 @@ var output = {
 }
 
 var assetsLoaders = [
-  {test: /\.css$/, loader: 'style!css!autoprefixer?browsers=last 2 versions'},
-  {test: /\.styl$/, loader: 'style!css!autoprefixer?browsers=last 2 versions!stylus'},
+  {test: /\.css$/, loader: 'style!css!postcss'},
+  {test: /\.styl$/, loader: 'style!css!postcss!stylus'},
   {test: /\.json$/, loader: 'json'},
   {
     test: /\.svg(\?v=[0-9].[0-9].[0-9])?$/,
@@ -51,13 +52,30 @@ var babelLoader = {
   }
 }
 
-var production = {
-  devtool: 'eval',
+var commonConfig = {
+  output: output,
 
+  standard: {
+    parser: 'babel-eslint'
+  },
+
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
+
+  resolve: {
+    extensions: ['', '.js', '.styl']
+  },
+
+  stats: {
+    chunkModules: false,
+    colors: true
+  }
+}
+
+var production = Object.assign({
+  devtool: 'eval',
   entry: [
     './src/app'
   ],
-  output: output,
 
   plugins: plugins.concat([
     new webpack.optimize.UglifyJsPlugin({
@@ -74,22 +92,10 @@ var production = {
     loaders: [].concat(
       assetsLoaders, babelLoader
     )
-  },
-
-  standard: {
-    parser: 'babel-eslint'
-  },
-
-  resolve: {
-    extensions: ['', '.js', '.styl']
-  },
-
-  stats: {
-    colors: true
   }
-}
+}, commonConfig)
 
-var development = {
+var development = Object.assign({
   port: 3000,
   devtool: 'inline-source-map',
   debug: true,
@@ -98,7 +104,6 @@ var development = {
     'webpack-dev-server/client?http://0.0.0.0:3000',
     'webpack/hot/only-dev-server'
   ],
-  output: output,
 
   plugins: plugins.concat([
     new webpack.HotModuleReplacementPlugin()
@@ -113,17 +118,8 @@ var development = {
       }, babelLoader
     ),
     preLoaders: [].concat(lintLoader)
-  },
-
-  resolve: {
-    extensions: ['', '.js', '.styl']
-  },
-
-  stats: {
-    chunkModules: false,
-    colors: true
   }
-}
+}, commonConfig)
 
 module.exports = production
 module.exports.development = development
