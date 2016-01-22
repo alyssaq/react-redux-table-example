@@ -15,9 +15,8 @@
     "dev": "node dev-server.js",
     "build": "rm -rf build && cp -pr src/static/ build && webpack",
     "lint": "eslint ./src ./tests *.js",
-    "test": "node ./node_modules/karma/bin/karma start ./karma.conf.js",
-    "test:dev": "node ./node_modules/karma/bin/karma start ./karma.conf.js --no-single-run --auto-watch",
-    "test:cov": "node ./node_modules/karma/bin/karma start ./karma.conf.js --reporters coverage"
+    "test": "mocha tests/unit --recursive -r babel-core/register -r tests/unit/setup",
+    "test:dev": "mocha tests/unit --recursive -r babel-core/register -r tests/unit/setup -w",
   },
   "dependencies": {
     "babel-runtime": "^6.3.19",
