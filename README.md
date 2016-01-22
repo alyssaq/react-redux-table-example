@@ -22,18 +22,18 @@ Features:
 
 ## Run - Development
 
-    $ npm run dev    # builds and hot reloads on changes
+    $ npm run dev       # builds and hot reloads on changes
 
 ## Run - Production
 
-    $ npm run build  # builds production assets (transpile, minify, etc)
-    $ npm start      # Start express server and serves index.html
+    $ npm run build     # builds production assets (transpile, minify, etc)
+    $ npm start         # Start express server and serves index.html
 
 ## Tests
-Tests and code coverage are run using [karma](http://karma-runner.github.io) and mocha
 
-    $ npm run lint   # Runs eslint
-    $ npm test
+    $ npm run lint      # Runs eslint
+    $ npm test          # Runs mocha
+    $ npm run test:dev  # Run mocha in watch mode
 
 ## Thanks
 
