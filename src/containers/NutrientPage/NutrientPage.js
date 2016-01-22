@@ -4,15 +4,13 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { tableActions as actions } from '../../actions'
 
-class NutrientPage extends React.Component {
-  render () {
-    return (
-      <div>
-        <h2> Food Nutrients List </h2>
-        <NutrientTable {...this.props} />
-      </div>
-    )
-  }
+const NutrientPage = props => {
+  return (
+    <div>
+      <h2> Food Nutrients List </h2>
+      <NutrientTable {...props} />
+    </div>
+  )
 }
 
 const mapStateToProps = ({table}) => table
