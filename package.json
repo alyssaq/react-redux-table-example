@@ -15,8 +15,8 @@
     "dev": "node dev-server.js",
     "build": "rm -rf build && cp -pr src/static/ build && webpack",
     "lint": "eslint ./src ./tests *.js",
-    "test": "mocha tests/unit --recursive -r babel-core/register -r tests/unit/setup",
-    "test:dev": "mocha tests/unit --recursive -r babel-core/register -r tests/unit/setup -w"
+    "test": "mocha tests --recursive -r babel-core/register -r tests/setup",
+    "test:dev": "mocha tests --recursive -r babel-core/register -r tests/setup -w"
   },
   "dependencies": {
     "babel-runtime": "^6.3.19",
