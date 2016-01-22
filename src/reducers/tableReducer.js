@@ -1,6 +1,6 @@
 import { ACTIONS } from '../constants'
 
-function preprocessData (data) {
+export function listFoodWithNutrients (data) {
   const foods = data.report.foods
 
   return foods.reduce((arr, food) => {
@@ -16,7 +16,7 @@ function handleTableActions (state, action) {
     case ACTIONS.RECEIVE_NUTRIENTS_DATA:
       return {
         isFetching: false,
-        data: preprocessData(action.data)
+        data: listFoodWithNutrients(action.data)
       }
     case ACTIONS.FILTER_NUTRIENTS_DATA:
       return { filterString: action.filterString.toLowerCase() }

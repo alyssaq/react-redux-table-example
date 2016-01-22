@@ -1,0 +1,567 @@
+{
+  "report": {
+    "sr": "28",
+    "groups": "All groups",
+    "subset": "All foods",
+    "end": 150,
+    "start": 0,
+    "total": 8490,
+    "foods": [
+      {
+        "ndbno": "09427",
+        "name": "Abiyuch, raw",
+        "weight": 114.0,
+        "measure": "0.5 cup",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "79",
+            "gm": 69.0
+          }
+        ]
+      },
+      {
+        "ndbno": "09002",
+        "name": "Acerola juice, raw",
+        "weight": 242.0,
+        "measure": "1.0 cup",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "56",
+            "gm": 23.0
+          }
+        ]
+      },
+      {
+        "ndbno": "09001",
+        "name": "Acerola, (west indian cherry), raw",
+        "weight": 98.0,
+        "measure": "1.0 cup",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "31",
+            "gm": 32.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14006",
+        "name": "Alcoholic beverage, beer, light",
+        "weight": 29.5,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "9",
+            "gm": 29.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14007",
+        "name": "Alcoholic beverage, beer, light, BUD LIGHT",
+        "weight": 29.5,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "9",
+            "gm": 29.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14005",
+        "name": "Alcoholic beverage, beer, light, BUDWEISER SELECT",
+        "weight": 29.5,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "8",
+            "gm": 28.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14248",
+        "name": "Alcoholic beverage, beer, light, higher alcohol",
+        "weight": 356.0,
+        "measure": "12.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "164",
+            "gm": 46.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14013",
+        "name": "Alcoholic beverage, beer, light, low carb",
+        "weight": 29.5,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "8",
+            "gm": 27.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14003",
+        "name": "Alcoholic beverage, beer, regular, all",
+        "weight": 29.7,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "13",
+            "gm": 43.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14004",
+        "name": "Alcoholic beverage, beer, regular, BUDWEISER",
+        "weight": 29.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "12",
+            "gm": 41.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14034",
+        "name": "Alcoholic beverage, creme de menthe, 72 proof",
+        "weight": 33.6,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "125",
+            "gm": 371.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14009",
+        "name": "Alcoholic beverage, daiquiri, canned",
+        "weight": 30.5,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "38",
+            "gm": 125.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14010",
+        "name": "Alcoholic beverage, daiquiri, prepared-from-recipe",
+        "weight": 30.2,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "56",
+            "gm": 186.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14533",
+        "name": "Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 100 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "82",
+            "gm": 295.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14037",
+        "name": "Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "64",
+            "gm": 231.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14550",
+        "name": "Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 86 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "70",
+            "gm": 250.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14551",
+        "name": "Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 90 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "73",
+            "gm": 263.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14532",
+        "name": "Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 94 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "76",
+            "gm": 275.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14049",
+        "name": "Alcoholic beverage, distilled, gin, 90 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "73",
+            "gm": 263.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14050",
+        "name": "Alcoholic beverage, distilled, rum, 80 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "64",
+            "gm": 231.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14051",
+        "name": "Alcoholic beverage, distilled, vodka, 80 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "64",
+            "gm": 231.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14052",
+        "name": "Alcoholic beverage, distilled, whiskey, 86 proof",
+        "weight": 27.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "70",
+            "gm": 250.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14415",
+        "name": "Alcoholic beverage, liqueur, coffee with cream, 34 proof",
+        "weight": 31.1,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "102",
+            "gm": 327.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14414",
+        "name": "Alcoholic beverage, liqueur, coffee, 53 proof",
+        "weight": 34.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "117",
+            "gm": 336.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14534",
+        "name": "Alcoholic beverage, liqueur, coffee, 63 proof",
+        "weight": 34.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "107",
+            "gm": 308.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14239",
+        "name": "Alcoholic beverage, malt beer, hard lemonade",
+        "weight": 335.0,
+        "measure": "11.2 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "228",
+            "gm": 68.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14015",
+        "name": "Alcoholic beverage, pina colada, canned",
+        "weight": 32.6,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "77",
+            "gm": 237.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14017",
+        "name": "Alcoholic beverage, pina colada, prepared-from-recipe",
+        "weight": 31.4,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "55",
+            "gm": 174.0
+          }
+        ]
+      },
+      {
+        "ndbno": "43479",
+        "name": "Alcoholic beverage, rice (sake)",
+        "weight": 29.1,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "39",
+            "gm": 134.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14019",
+        "name": "Alcoholic beverage, tequila sunrise, canned",
+        "weight": 31.1,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "34",
+            "gm": 110.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14531",
+        "name": "Alcoholic beverage, whiskey sour",
+        "weight": 30.4,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "45",
+            "gm": 149.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14027",
+        "name": "Alcoholic beverage, whiskey sour, canned",
+        "weight": 30.8,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "37",
+            "gm": 119.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14029",
+        "name": "Alcoholic beverage, whiskey sour, prepared from item 14028",
+        "weight": 30.4,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "47",
+            "gm": 153.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14025",
+        "name": "Alcoholic beverage, whiskey sour, prepared with water, whiskey and powder mix",
+        "weight": 29.4,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "48",
+            "gm": 164.0
+          }
+        ]
+      },
+      {
+        "ndbno": "43154",
+        "name": "Alcoholic beverage, wine, cooking",
+        "weight": 4.9,
+        "measure": "1.0 tsp",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "2",
+            "gm": 50.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14536",
+        "name": "Alcoholic beverage, wine, dessert, dry",
+        "weight": 29.5,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "45",
+            "gm": 152.0
+          }
+        ]
+      },
+      {
+        "ndbno": "14057",
+        "name": "Alcoholic beverage, wine, dessert, sweet",
+        "weight": 29.5,
+        "measure": "1.0 fl oz",
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "nutrient": "Energy",
+            "unit": "kcal",
+            "value": "47",
+            "gm": 160.0
+          }
+        ]
+      }
+    ]
+  }
+}
