@@ -14,7 +14,7 @@ Features:
  * [Stylus](http://learnboost.github.io/stylus)
  * [Webpack](https://webpack.github.io) dev and production
  * Eslint [standard](http://standardjs.com)
- * [mocha](https://mochajs.org) + [chai](http://chaijs.com)
+ * Unit tests with [mocha](https://mochajs.org) + [chai](http://chaijs.com)
 
 ## Install
 
