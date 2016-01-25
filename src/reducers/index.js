@@ -1,4 +1,3 @@
-import { routerStateReducer as router } from 'redux-router'
 import CONSTS from '../constants'
 import { combineReducers } from 'redux'
 import table from './tableReducer'
@@ -18,8 +17,7 @@ function errorMessage (state = {}, action) {
 
 const rootReducer = combineReducers({
   table,
-  errorMessage,
-  router
+  errorMessage
 })
 
 export default rootReducer
