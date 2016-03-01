@@ -4,7 +4,9 @@ export function listFoodWithNutrients (data) {
   const foods = data.report.foods
 
   return foods.reduce((arr, food) => {
-    food.nutrients.forEach(nutrient => nutrient.food = food.name)
+    food.nutrients.forEach((nutrient) => {
+      nutrient.food = food.name
+    })
     return arr.concat(food.nutrients)
   }, [])
 }

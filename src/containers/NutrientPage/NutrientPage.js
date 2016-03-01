@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { tableActions as actions } from '../../actions'
 
-const NutrientPage = props => {
+const NutrientPage = (props) => {
   return (
     <div>
       <h2> Food Nutrients List </h2>

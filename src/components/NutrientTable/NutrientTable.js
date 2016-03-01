@@ -5,17 +5,31 @@ import renderers from '../../modules/renderers'
 
 // Stateless cell components for Table component
 function SortHeaderCell ({children, columnKey, ...props}) {
+  const clickFunc = () => props.sortBy(columnKey)
+
   return (
     <Cell {...props}>
-      <a onClick={() => props.sortBy(columnKey)}>
+      <a onClick={clickFunc}>
         {children} {renderers.renderSortArrow(props, columnKey)}
       </a>
     </Cell>
   )
 }
 
+SortHeaderCell.propTypes = {
+  sortBy: React.PropTypes.func.isRequired,
+  columnKey: React.PropTypes.string,
+  children: React.PropTypes.any
+}
+
 function DataCell ({data, rowIndex, columnKey, ...props}) {
   return <Cell {...props}> {data[rowIndex][columnKey]} </Cell>
+}
+
+DataCell.propTypes = {
+  data: React.PropTypes.array,
+  rowIndex: React.PropTypes.number,
+  columnKey: React.PropTypes.string
 }
 
 class NutrientTable extends React.Component {
@@ -29,7 +43,8 @@ class NutrientTable extends React.Component {
   }
 
   handleSortClick (label, key) {
-    return <a onClick={() => this.props.sortBy(key)}>{label}</a>
+    const sortFunc = () => this.props.sortBy(key)
+    return <a onClick={sortFunc}>{label}</a>
   }
 
   doesMatch (str) {
@@ -40,7 +55,7 @@ class NutrientTable extends React.Component {
     const {data, filterString} = this.props
     const str = filterString.toLowerCase()
     return str !== ''
-      ? data.filter(r => Object.values(r).some(this.doesMatch(str)))
+      ? data.filter((r) => Object.values(r).some(this.doesMatch(str)))
       : data
   }
 

@@ -20,11 +20,12 @@ const AboutPage = () => {
         criticisms are greatly welcomed!
       </p>
       <p> Source code at: &nbsp;
-      <a href='https://github.com/alyssaq/react-redux-table-example'>
-        <img className='github-logo' title='Github logo face'
-          src='http://cdn.flaticon.com/svg/37/37819.svg'/>
-          /alyssaq/react-redux-table-example
-      </a></p>
+        <a href='https://github.com/alyssaq/react-redux-table-example'>
+          <img className='github-logo' title='Github logo face'
+            src='http://cdn.flaticon.com/svg/37/37819.svg'/>
+            /alyssaq/react-redux-table-example
+        </a>
+      </p>
     </div>
   )
 }

@@ -36,14 +36,14 @@ function errorAction (error) {
 //      Default success action: {type: opts.types.receive, data: data}
 //  }
 export default function fetchDispatch (opts) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({ type: opts.types.request })
 
     return fetch(opts.url, { headers: opts.headers || {} })
       .then(handleResponse)
-      .then(data => { // Dispatch the recevied action with type and data
+      .then((data) => { // Dispatch the recevied action with type and data
         const obj = opts.onReceived ? opts.onReceived(data) : { data }
         return dispatch(Object.assign({ type: opts.types.receive }, obj))
-      }).catch(error => dispatch(errorAction(error)))
+      }).catch((error) => dispatch(errorAction(error)))
   }
 }

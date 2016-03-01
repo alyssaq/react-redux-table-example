@@ -3,9 +3,11 @@ import { Link } from 'react-router'
 
 class Renderers {
   renderLink (key) {
-    return val => <Link to={key} params={{[key]: val}}>
-      {val}
-    </Link>
+    return (val) => {
+      <Link to={key} params={{[key]: val}}>
+        {val}
+      </Link>
+    }
   }
 
   renderSortArrow ({sortKey, sortDesc}, sortId) {
