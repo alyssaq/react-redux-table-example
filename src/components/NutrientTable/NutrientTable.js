@@ -56,12 +56,12 @@ class NutrientTable extends React.Component {
   }
 
   render () {
-    const { isFetching } = this.props
+    const { isFetching, filterString } = this.props
     const data = this.sortData().filterData()
 
     return (
       <div>
-        <input className='filter-input'
+        <input className='filter-input' value={filterString}
           onChange={::this.handleFilterStringChange}
           type='text' placeholder='Filter Rows'
           autoCorrect='off' autoCapitalize='off' spellCheck='false'/>
