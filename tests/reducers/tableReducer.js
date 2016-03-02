@@ -9,7 +9,7 @@ describe('tableReducer.listFoodWithNutrients', () => {
       .to.be.an('array')
       .to.have.length.above(35)
 
-    result.forEach(row => {
+    result.forEach((row) => {
       expect(row).to.have.all.keys([
         'food',
         'nutrient_id',
