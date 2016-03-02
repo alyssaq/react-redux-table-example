@@ -1,5 +1,6 @@
 # React Redux Table Example
 
+[![Build Status](https://travis-ci.org/alyssaq/react-redux-table-example.png?branch=master)](https://travis-ci.org/alyssaq/react-redux-table-example)
 Demo: <http://react-redux-table.surge.sh>
 
 Features:
