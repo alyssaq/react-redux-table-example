@@ -15,7 +15,7 @@
     "dev": "node dev-server.js",
     "build": "rm -rf build && cp -pr src/static/ build && webpack",
     "lint": "eslint ./src ./tests *.js",
-    "test": "mocha tests --recursive -r babel-core/register -r tests/setup",
+    "test": "npm run lint && mocha tests --recursive -r babel-core/register -r tests/setup",
     "test:dev": "mocha tests --recursive -r babel-core/register -r tests/setup -w"
   },
   "dependencies": {
