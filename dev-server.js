@@ -1,8 +1,8 @@
-var webpack = require('webpack')
-var WebpackDevServer = require('webpack-dev-server')
-var config = require('./webpack.config.js').development
+const webpack = require('webpack')
+const WebpackDevServer = require('webpack-dev-server')
+const config = require('./webpack.config.js').development
 
-var server = new WebpackDevServer(webpack(config), {
+const server = new WebpackDevServer(webpack(config), {
   contentBase: 'src/static/',
   stats: config.stats,
   publicPath: config.output.publicPath,
