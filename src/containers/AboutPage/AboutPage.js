@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <div className='about'>
       <h1> About </h1>
-      This example app serves as a boilerplate for my recurring use case: <br/>
+      This example app serves as a boilerplate for my recurring use case: <br />
       <ol>
         <li> Request data from multiple APIs </li>
         <li> Transform/merge the data </li>
@@ -22,7 +22,7 @@ const AboutPage = () => {
       <p> Source code at: &nbsp;
         <a href='https://github.com/alyssaq/react-redux-table-example'>
           <img className='github-logo' title='Github logo face'
-            src='http://cdn.flaticon.com/svg/37/37819.svg'/>
+            src='http://cdn.flaticon.com/svg/37/37819.svg' />
             /alyssaq/react-redux-table-example
         </a>
       </p>

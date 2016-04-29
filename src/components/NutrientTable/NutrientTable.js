@@ -79,8 +79,8 @@ class NutrientTable extends React.Component {
         <input className='filter-input' value={filterString}
           onChange={::this.handleFilterStringChange}
           type='text' placeholder='Filter Rows'
-          autoCorrect='off' autoCapitalize='off' spellCheck='false'/>
-        <br/>
+          autoCorrect='off' autoCapitalize='off' spellCheck='false' />
+        <br />
 
         {isFetching && data.length === 0 &&
           <div className='loader-box'></div>}
@@ -94,25 +94,25 @@ class NutrientTable extends React.Component {
           <Column
             columnKey='food'
             header={<SortHeaderCell {...this.props}> Food </SortHeaderCell>}
-            cell={<DataCell data={data}/>}
+            cell={<DataCell data={data} />}
             flexGrow={3}
             width={100} />
           <Column
             columnKey='nutrient'
             header={<SortHeaderCell {...this.props}> Nutrient </SortHeaderCell>}
-            cell={<DataCell data={data}/>}
+            cell={<DataCell data={data} />}
             flexGrow={1}
             width={100} />
           <Column
             columnKey='value'
             header={<SortHeaderCell {...this.props}> Value </SortHeaderCell>}
-            cell={<DataCell data={data}/>}
+            cell={<DataCell data={data} />}
             flexGrow={0.5}
             width={100} />
           <Column
             columnKey='unit'
             header={<SortHeaderCell {...this.props}> Unit </SortHeaderCell>}
-            cell={<DataCell data={data}/>}
+            cell={<DataCell data={data} />}
             flexGrow={0.1}
             width={100} />
         </ResponsiveTableWrapper>

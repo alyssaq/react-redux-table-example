@@ -7,9 +7,9 @@ import NotFoundPage from './containers/NotFoundPage'
 
 export default (
   <Route path='/' component={App}>
-    <IndexRoute component={NutrientPage}/>
+    <IndexRoute component={NutrientPage} />
     <Route path='nutrients' component={NutrientPage} />
     <Route path='about' component={AboutPage} />
-    <Route path='*' component={NotFoundPage}/>
+    <Route path='*' component={NotFoundPage} />
   </Route>
 )
