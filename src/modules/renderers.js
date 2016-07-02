@@ -10,7 +10,7 @@ class Renderers {
     }
   }
 
-  renderSortArrow ({sortKey, sortDesc}, sortId) {
+  renderSortArrow (sortKey, sortDesc, sortId) {
     return sortKey === sortId ? (sortDesc ? '↓' : '↑') : ''
   }
 

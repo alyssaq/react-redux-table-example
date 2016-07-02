@@ -4,13 +4,13 @@ import ResponsiveTableWrapper from '../ResponsiveTableWrapper'
 import renderers from '../../modules/renderers'
 
 // Stateless cell components for Table component
-function SortHeaderCell ({children, columnKey, ...props}) {
-  const clickFunc = () => props.sortBy(columnKey)
+function SortHeaderCell ({children, sortBy, sortKey, sortDesc, columnKey, ...props}) {
+  const clickFunc = () => sortBy(columnKey)
 
   return (
     <Cell {...props}>
       <a onClick={clickFunc}>
-        {children} {renderers.renderSortArrow(props, columnKey)}
+        {children} {renderers.renderSortArrow(sortKey, sortDesc, columnKey)}
       </a>
     </Cell>
   )
@@ -18,6 +18,8 @@ function SortHeaderCell ({children, columnKey, ...props}) {
 
 SortHeaderCell.propTypes = {
   sortBy: React.PropTypes.func.isRequired,
+  sortKey: React.PropTypes.string.isRequired,
+  sortDesc: React.PropTypes.bool.isRequired,
   columnKey: React.PropTypes.string,
   children: React.PropTypes.any
 }
@@ -27,7 +29,7 @@ function DataCell ({data, rowIndex, columnKey, ...props}) {
 }
 
 DataCell.propTypes = {
-  data: React.PropTypes.array,
+  data: React.PropTypes.array.isRequired,
   rowIndex: React.PropTypes.number,
   columnKey: React.PropTypes.string
 }
@@ -71,7 +73,9 @@ class NutrientTable extends React.Component {
   }
 
   render () {
-    const { isFetching, filterString } = this.props
+    const { isFetching, filterString, sortBy, sortKey, sortDesc } = this.props
+    const headerCellProps = { sortBy, sortKey, sortDesc }
+
     const data = this.sortData().filterData()
 
     return (
@@ -93,25 +97,25 @@ class NutrientTable extends React.Component {
           rowsCount={data.length}>
           <Column
             columnKey='food'
-            header={<SortHeaderCell {...this.props}> Food </SortHeaderCell>}
+            header={<SortHeaderCell {...headerCellProps}> Food </SortHeaderCell>}
             cell={<DataCell data={data} />}
             flexGrow={3}
             width={100} />
           <Column
             columnKey='nutrient'
-            header={<SortHeaderCell {...this.props}> Nutrient </SortHeaderCell>}
+            header={<SortHeaderCell {...headerCellProps}> Nutrient </SortHeaderCell>}
             cell={<DataCell data={data} />}
             flexGrow={1}
             width={100} />
           <Column
             columnKey='value'
-            header={<SortHeaderCell {...this.props}> Value </SortHeaderCell>}
+            header={<SortHeaderCell {...headerCellProps}> Value </SortHeaderCell>}
             cell={<DataCell data={data} />}
             flexGrow={0.5}
             width={100} />
           <Column
             columnKey='unit'
-            header={<SortHeaderCell {...this.props}> Unit </SortHeaderCell>}
+            header={<SortHeaderCell {...headerCellProps}> Unit </SortHeaderCell>}
             cell={<DataCell data={data} />}
             flexGrow={0.1}
             width={100} />
