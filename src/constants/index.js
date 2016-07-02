@@ -5,7 +5,7 @@ export default {
   // http://www.ars.usda.gov/sp2UserFiles/Place/80400525/Data/SR/SR28/sr28_doc.pdf
   NUTRIENTS: [208, 205, 203, 204, 269, 291, 303],
   USDA_NUTRIENTS_URL_WITH_APIKEY: 'http://api.nal.usda.gov/ndb/nutrients?' +
-    'api_key=uFKMsZENr1ZUZEIDu5CYzA8UeVERm57BEZj2jBK1',
+    'api_key=uFKMsZENr1ZUZEIDu5CYzA8UeVERm57BEZj2jBK1&max=1500',
 
   ACTIONS: keymirror({
     REQUEST_NUTRIENTS_DATA: null,
