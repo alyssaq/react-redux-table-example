@@ -44,11 +44,6 @@ class NutrientTable extends React.Component {
     this.props.filterBy(e.target.value)
   }
 
-  handleSortClick (label, key) {
-    const sortFunc = () => this.props.sortBy(key)
-    return <a onClick={sortFunc}>{label}</a>
-  }
-
   doesMatch (str) {
     return (key) => (key + '').toLowerCase().indexOf(str) !== -1
   }
