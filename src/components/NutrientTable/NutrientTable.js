@@ -39,9 +39,11 @@ class NutrientTable extends React.Component {
     this.props.fetchData()
   }
 
-  handleFilterStringChange (e) {
-    e.preventDefault()
-    this.props.filterBy(e.target.value)
+  handleFilterStringChange () {
+    return (e) => {
+      e.preventDefault()
+      this.props.filterBy(e.target.value)
+    }
   }
 
   doesMatch (str) {
@@ -76,13 +78,13 @@ class NutrientTable extends React.Component {
     return (
       <div>
         <input className='filter-input' value={filterString}
-          onChange={::this.handleFilterStringChange}
+          onChange={this.handleFilterStringChange()}
           type='text' placeholder='Filter Rows'
           autoCorrect='off' autoCapitalize='off' spellCheck='false' />
         <br />
 
         {isFetching && data.length === 0 &&
-          <div className='loader-box'></div>}
+          <div className='loader-box' />}
         {!isFetching && data.length === 0 &&
           <h3 className='center'>No Matching Results :( </h3>}
 

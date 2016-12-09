@@ -5,9 +5,11 @@ import Header from '../../components/Header'
 import { resetErrorMessage } from '../../actions'
 
 class App extends React.Component {
-  handleDismissClick (e) {
-    e.preventDefault()
-    this.props.resetErrorMessage()
+  handleDismissClick () {
+    return (e) => {
+      e.preventDefault()
+      this.props.resetErrorMessage()
+    }
   }
 
   renderErrorMessage () {
@@ -17,7 +19,7 @@ class App extends React.Component {
     return (
       <p className='error'>
         {errorMessage}
-        <span className='close' onClick={::this.handleDismissClick}>
+        <span className='close' onClick={this.handleDismissClick()}>
           &#x2718;
         </span>
       </p>
@@ -31,7 +33,7 @@ class App extends React.Component {
         <Header />
         {this.renderErrorMessage()}
         <main>
-        {children}
+          {children}
         </main>
       </div>
     )
