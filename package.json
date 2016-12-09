@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React Redux Example",
   "engines": {
-    "node": ">5.4.0"
+    "node": ">7.0.0"
   },
   "repository": {
     "type": "git",
