@@ -14,7 +14,7 @@ Features:
  * Separate reducers and actions
  * ES6/ES7 with [babeljs](https://babeljs.io) (es2015, stage-0, react)
  * [Stylus](http://learnboost.github.io/stylus)
- * [Webpack](https://webpack.github.io) dev and production
+ * [Webpack 2.2+](https://webpack.github.io) dev and production
  * Eslint [standard](http://standardjs.com)
  * Unit tests with [mocha](https://mochajs.org) + [chai](http://chaijs.com)
 
