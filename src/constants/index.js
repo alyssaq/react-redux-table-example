@@ -1,4 +1,9 @@
-import keymirror from 'keymirror'
+function stringsToObject (actions) {
+  return actions.trim().split(/\s+/).reduce((obj, action) => {
+    obj[action] = action
+    return obj
+  }, {})
+}
 
 export default {
   // nutrient ids from SR28 docs
@@ -7,13 +12,13 @@ export default {
   USDA_NUTRIENTS_URL_WITH_APIKEY: 'http://api.nal.usda.gov/ndb/nutrients?' +
     'api_key=uFKMsZENr1ZUZEIDu5CYzA8UeVERm57BEZj2jBK1&max=1500',
 
-  ACTIONS: keymirror({
-    REQUEST_NUTRIENTS_DATA: null,
-    RECEIVE_NUTRIENTS_DATA: null,
-    FILTER_NUTRIENTS_DATA: null,
-    SORT_NUTRIENTS_DATA: null,
+  ACTIONS: stringsToObject(`
+    REQUEST_NUTRIENTS_DATA
+    RECEIVE_NUTRIENTS_DATA
+    FILTER_NUTRIENTS_DATA
+    SORT_NUTRIENTS_DATA
 
-    SET_ERROR_MESSAGE: null,
-    RESET_ERROR_MESSAGE: null
-  })
+    SET_ERROR_MESSAGE
+    RESET_ERROR_MESSAGE
+  `)
 }
