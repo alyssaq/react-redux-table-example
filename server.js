@@ -15,6 +15,6 @@ app.use(function (req, res, next) {
 })
 
 const port = process.env.PORT || 4000
-app.listen(port, function () {
+app.listen(port, '0.0.0.0', function () {
   console.log('Server listening on port: ' + port)
 })
