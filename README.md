@@ -31,6 +31,18 @@ Features:
     $ npm run build     # builds production assets (transpile, minify, etc)
     $ npm start         # Start express server and serves index.html
 
+## Docker
+To run a production version in [docker](https://www.docker.com):
+```sh
+$ docker build -t react-redux-example .   # Build docker container
+$ docker run -d --name react-redux-example -p 4000:4000 react-redux-example  # Run docker container
+```
+App will be running at <http://localhost:4000>
+
+```sh
+$ docker stop react-redux-example   # Stop container
+```
+
 ## Tests
 
     $ npm run lint      # Runs eslint
