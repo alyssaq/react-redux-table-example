@@ -1,5 +1,6 @@
 import './App.styl'
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Header from '../../components/Header'
 import { resetErrorMessage } from '../../actions'
@@ -42,10 +43,10 @@ class App extends React.Component {
 
 App.propTypes = {
   // Injected by React Redux
-  errorMessage: React.PropTypes.any,
-  resetErrorMessage: React.PropTypes.func,
+  errorMessage: PropTypes.any,
+  resetErrorMessage: PropTypes.func,
   // Injected by React Router
-  children: React.PropTypes.node
+  children: PropTypes.node
 }
 
 function mapStateToProps (state) {

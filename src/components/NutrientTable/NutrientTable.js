@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Column, Cell } from 'fixed-data-table'
 import ResponsiveTableWrapper from '../ResponsiveTableWrapper'
 import renderers from '../../modules/renderers'
@@ -17,11 +18,11 @@ function SortHeaderCell ({children, sortBy, sortKey, sortDesc, columnKey, ...pro
 }
 
 SortHeaderCell.propTypes = {
-  sortBy: React.PropTypes.func.isRequired,
-  sortKey: React.PropTypes.string.isRequired,
-  sortDesc: React.PropTypes.bool.isRequired,
-  columnKey: React.PropTypes.string,
-  children: React.PropTypes.any
+  sortBy: PropTypes.func.isRequired,
+  sortKey: PropTypes.string.isRequired,
+  sortDesc: PropTypes.bool.isRequired,
+  columnKey: PropTypes.string,
+  children: PropTypes.any
 }
 
 function DataCell ({data, rowIndex, columnKey, ...props}) {
@@ -29,9 +30,9 @@ function DataCell ({data, rowIndex, columnKey, ...props}) {
 }
 
 DataCell.propTypes = {
-  data: React.PropTypes.array.isRequired,
-  rowIndex: React.PropTypes.number,
-  columnKey: React.PropTypes.string
+  data: PropTypes.array.isRequired,
+  rowIndex: PropTypes.number,
+  columnKey: PropTypes.string
 }
 
 class NutrientTable extends React.Component {
@@ -124,16 +125,16 @@ class NutrientTable extends React.Component {
 
 NutrientTable.propTypes = {
   // actions
-  fetchData: React.PropTypes.func.isRequired,
-  sortBy: React.PropTypes.func.isRequired,
-  filterBy: React.PropTypes.func.isRequired,
+  fetchData: PropTypes.func.isRequired,
+  sortBy: PropTypes.func.isRequired,
+  filterBy: PropTypes.func.isRequired,
 
   // state data
-  data: React.PropTypes.array.isRequired,
-  filterString: React.PropTypes.string.isRequired,
-  sortKey: React.PropTypes.string.isRequired,
-  sortDesc: React.PropTypes.bool.isRequired,
-  isFetching: React.PropTypes.bool.isRequired
+  data: PropTypes.array.isRequired,
+  filterString: PropTypes.string.isRequired,
+  sortKey: PropTypes.string.isRequired,
+  sortDesc: PropTypes.bool.isRequired,
+  isFetching: PropTypes.bool.isRequired
 }
 
 export default NutrientTable

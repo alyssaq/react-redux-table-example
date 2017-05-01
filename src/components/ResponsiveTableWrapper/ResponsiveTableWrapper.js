@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { debounce } from 'lodash'
 import { Table } from 'fixed-data-table'
 import './ResponsiveTableWrapper.styl'
@@ -66,8 +67,8 @@ class ResponsiveTableWrapper extends React.Component {
 }
 
 ResponsiveTableWrapper.propTypes = {
-  padding: React.PropTypes.object,
-  refreshRate: React.PropTypes.number
+  padding: PropTypes.object,
+  refreshRate: PropTypes.number
 }
 
 ResponsiveTableWrapper.defaultProps = {
