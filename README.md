@@ -19,17 +19,20 @@ Features:
  * Unit tests with [mocha](https://mochajs.org) + [chai](http://chaijs.com)
 
 ## Install
-
-    $ npm install
+```sh
+$ npm install
+```
 
 ## Run - Development
-
-    $ npm run dev       # builds and hot reloads on changes
+```sh
+$ npm run dev       # builds and hot reloads on changes
+```
 
 ## Run - Production
-
-    $ npm run build     # builds production assets (transpile, minify, etc)
-    $ npm start         # Start express server and serves index.html
+```sh
+$ npm run build     # builds production assets (transpile, minify, etc)
+$ npm start         # Start express server and serves index.html
+```
 
 ## Docker
 To run a production version in [docker](https://www.docker.com):
@@ -44,10 +47,11 @@ $ docker stop react-redux-example   # Stop container
 ```
 
 ## Tests
-
-    $ npm run lint      # Runs eslint
-    $ npm test          # Runs mocha
-    $ npm run test:dev  # Run mocha in watch mode
+```sh
+$ npm run lint      # Runs eslint
+$ npm test          # Runs mocha
+$ npm run test:dev  # Run mocha in watch mode
+```
 
 ## Thanks
 
