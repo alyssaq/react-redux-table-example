@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-fetch'
 import { ACTIONS } from '../constants'
 
 function handleResponse (response) {
@@ -39,7 +38,7 @@ export default function fetchDispatch (opts) {
   return (dispatch) => {
     dispatch({ type: opts.types.request })
 
-    return fetch(opts.url, { headers: opts.headers || {} })
+    return window.fetch(opts.url, { headers: opts.headers || {} })
       .then(handleResponse)
       .then((data) => { // Dispatch the recevied action with type and data
         const obj = opts.onReceived ? opts.onReceived(data) : { data }
