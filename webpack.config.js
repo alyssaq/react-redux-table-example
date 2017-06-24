@@ -15,9 +15,7 @@ const assetsLoaders = [{
     {
       loader: 'postcss-loader',
       options: {
-        plugins: function () {
-          return [require('autoprefixer')]
-        }
+        plugins: () => [require('autoprefixer')]
       }
     },
     'stylus-loader'
@@ -41,14 +39,12 @@ const assetsLoaders = [{
 
 const babelLoader = {
   test: /\.jsx?$/,
-  loader: 'babel-loader',
   exclude: /node_modules/,
-  query: {
-    cacheDirectory: true,
-    plugins: [
-      'transform-runtime',
-      'babel-plugin-add-module-exports'
-    ]
+  use: {
+    loader: 'babel-loader',
+    options: {
+      cacheDirectory: true
+    }
   }
 }
 
