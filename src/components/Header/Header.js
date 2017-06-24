@@ -1,13 +1,13 @@
 import React from 'react'
 import './Header.styl'
-import { IndexLink } from 'react-router'
 import Navigation from './Navigation'
+import { Link } from 'react-router-dom'
 
 export default (props) => {
   return (
     <header>
       <strong>
-        <IndexLink to='/'> React Redux Example </IndexLink>
+        <Link to='/'> React Redux Example </Link>
       </strong>
       <Navigation />
     </header>

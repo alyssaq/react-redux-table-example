@@ -9,12 +9,12 @@ Features:
  * [React](https://facebook.github.io/react)-[Redux](http://redux.js.org) data flow
  * Fetch JSON from an API and render into a table
  * Filter and sort data in the table
- * Routing with [react-router](https://github.com/rackt/react-router)
+ * Routing with [react-router 4+](https://github.com/rackt/react-router)
  * Redux middlewares
  * Separate reducers and actions
  * ES6/ES7 with [babeljs](https://babeljs.io) (stage-0, react)
  * [Stylus](http://learnboost.github.io/stylus)
- * [Webpack 2+](https://webpack.github.io) dev and production
+ * [Webpack 3+](https://webpack.github.io) dev and production
  * Eslint [standard](http://standardjs.com)
  * Unit tests with [mocha](https://mochajs.org) + [chai](http://chaijs.com)
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { NavLink } from 'react-router-dom'
 import './Navigation.styl'
 
 export default (props) => {
@@ -7,10 +7,10 @@ export default (props) => {
     <nav role='navigation'>
       <ul>
         <li>
-          <Link to='/nutrients'>Nutrients</Link>
+          <NavLink to='/nutrients' activeClassName='active'>Nutrients</NavLink>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <NavLink to='/about' activeClassName='active'>About</NavLink>
         </li>
       </ul>
     </nav>

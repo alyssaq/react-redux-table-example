@@ -2,8 +2,12 @@ import './App.styl'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Header from '../../components/Header'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { resetErrorMessage } from '../../actions'
+import Header from '../../components/Header'
+import NutrientPage from '../NutrientPage'
+import AboutPage from '../AboutPage'
+import NotFoundPage from '../NotFoundPage'
 
 class App extends React.Component {
   handleDismissClick () {
@@ -28,33 +32,30 @@ class App extends React.Component {
   }
 
   render () {
-    const { children } = this.props
-    return (
+    return <BrowserRouter>
       <div>
         <Header />
         {this.renderErrorMessage()}
+
         <main>
-          {children}
+          <Switch>
+            <Route path='/' exact component={NutrientPage} />
+            <Route path='/nutrients' exact component={NutrientPage} />
+            <Route path='/about' exact component={AboutPage} />
+            <Route component={NotFoundPage} />
+          </Switch>
         </main>
       </div>
-    )
+    </BrowserRouter>
   }
 }
 
 App.propTypes = {
-  // Injected by React Redux
   errorMessage: PropTypes.any,
-  resetErrorMessage: PropTypes.func,
-  // Injected by React Router
-  children: PropTypes.node
+  resetErrorMessage: PropTypes.func
 }
 
-function mapStateToProps (state) {
-  return {
-    errorMessage: state.errorMessage
-  }
-}
-
-export default connect(mapStateToProps, {
-  resetErrorMessage: resetErrorMessage
-})(App)
+export default connect(
+  (state) => ({ errorMessage: state.errorMessage }),
+  { resetErrorMessage: resetErrorMessage }
+)(App)
