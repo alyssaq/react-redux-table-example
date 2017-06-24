@@ -48,14 +48,16 @@ class NutrientTable extends React.Component {
   }
 
   doesMatch (str) {
-    return (key) => (key + '').toLowerCase().indexOf(str) !== -1
+    return (obj) => {
+      return (obj.food + obj.nutrient + obj.value + obj.unit).toLowerCase().includes(str)
+    }
   }
 
   filterData () {
     const {data, filterString} = this.props
     const str = filterString.toLowerCase()
     return str !== ''
-      ? data.filter((r) => Object.values(r).some(this.doesMatch(str)))
+      ? data.filter(this.doesMatch(str))
       : data
   }
 
