@@ -15,7 +15,10 @@ const assetsLoaders = [{
     {
       loader: 'postcss-loader',
       options: {
-        plugins: () => [require('autoprefixer')]
+        sourceMap: true,
+        plugins: () => [
+          require('autoprefixer')()
+        ]
       }
     },
     'stylus-loader'
