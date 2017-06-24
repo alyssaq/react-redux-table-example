@@ -54,5 +54,7 @@ $ npm run test:dev  # Run mocha in watch mode
 ```
 
 ## Thanks
-
 Data from [USDA nutrient API](http://ndb.nal.usda.gov/ndb/doc/apilist/API-NUTRIENT-REPORT.md)
+
+## License
+[MIT](https://alyssaq.github.io/mit-license)
