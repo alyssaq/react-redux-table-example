@@ -309,15 +309,13 @@
       },
       {
         "ndbno": "14051",
-        "name": "Alcoholic beverage, distilled, vodka, 80 proof",
-        "weight": 27.8,
-        "measure": "1.0 fl oz",
+        "name": "Beef, cured, dried",
         "nutrients": [
           {
             "nutrient_id": "208",
-            "nutrient": "Energy",
-            "unit": "kcal",
-            "value": "64",
+            "nutrient": "Carbohydrate",
+            "unit": "g",
+            "value": "0.77",
             "gm": 231.0
           }
         ]

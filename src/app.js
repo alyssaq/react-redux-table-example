@@ -8,7 +8,8 @@ import configureStore from './store/configureStore'
 const initialAppState = {
   table: {
     isFetching: false,
-    data: [],
+    allData: [], // stores the unfiltered data
+    data: [], // stores data to be rendered by component
     filterString: '',
     sortDesc: false,
     sortKey: 'nutrient'

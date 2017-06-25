@@ -1,39 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Column, Cell } from 'fixed-data-table-2'
+import { Column } from 'fixed-data-table-2'
+import { SortHeaderCell, DataCell } from './Cells'
 import ResponsiveTableWrapper from '../ResponsiveTableWrapper'
-import renderers from '../../modules/renderers'
-
-// Stateless cell components for Table component
-function SortHeaderCell ({children, sortBy, sortKey, sortDesc, columnKey, ...props}) {
-  const clickFunc = () => sortBy(columnKey)
-
-  return (
-    <Cell {...props}>
-      <a onClick={clickFunc}>
-        {children} {renderers.renderSortArrow(sortKey, sortDesc, columnKey)}
-      </a>
-    </Cell>
-  )
-}
-
-SortHeaderCell.propTypes = {
-  sortBy: PropTypes.func.isRequired,
-  sortKey: PropTypes.string.isRequired,
-  sortDesc: PropTypes.bool.isRequired,
-  columnKey: PropTypes.string,
-  children: PropTypes.any
-}
-
-function DataCell ({data, rowIndex, columnKey, ...props}) {
-  return <Cell {...props}> {data[rowIndex][columnKey]} </Cell>
-}
-
-DataCell.propTypes = {
-  data: PropTypes.array.isRequired,
-  rowIndex: PropTypes.number,
-  columnKey: PropTypes.string
-}
 
 class NutrientTable extends React.Component {
   componentWillMount () {
@@ -47,47 +16,19 @@ class NutrientTable extends React.Component {
     }
   }
 
-  doesMatch (str) {
-    return (obj) => {
-      return (obj.food + obj.nutrient + obj.value + obj.unit).toLowerCase().includes(str)
-    }
-  }
-
-  filterData () {
-    const {data, filterString} = this.props
-    const str = filterString.toLowerCase()
-    return str !== ''
-      ? data.filter(this.doesMatch(str))
-      : data
-  }
-
-  sortData () {
-    const {data, sortKey, sortDesc} = this.props
-    const multiplier = sortDesc ? -1 : 1
-    data.sort((a, b) => {
-      const aVal = a[sortKey] || 0
-      const bVal = b[sortKey] || 0
-      return aVal > bVal ? multiplier : (aVal < bVal ? -multiplier : 0)
-    })
-    return this
-  }
-
   render () {
-    const { isFetching, filterString, sortBy, sortKey, sortDesc } = this.props
+    const { isFetching, data, filterString, sortBy, sortKey, sortDesc } = this.props
     const headerCellProps = { sortBy, sortKey, sortDesc }
-
-    const data = this.sortData().filterData()
 
     return (
       <div>
         <input className='filter-input' value={filterString}
           onChange={this.handleFilterStringChange()}
-          type='text' placeholder='Filter Rows'
+          type='search' placeholder='Filter Rows'
           autoCorrect='off' autoCapitalize='off' spellCheck='false' />
         <br />
 
-        {isFetching && data.length === 0 &&
-          <div className='loader-box' />}
+        {isFetching && <div className='loader-box' />}
         {!isFetching && data.length === 0 &&
           <h3 className='center'>No Matching Results :( </h3>}
 
