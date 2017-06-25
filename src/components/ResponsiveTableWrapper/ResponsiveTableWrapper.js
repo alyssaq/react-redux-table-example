@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { debounce } from 'lodash'
-import { Table } from 'fixed-data-table'
+import { Table } from 'fixed-data-table-2'
 import './ResponsiveTableWrapper.styl'
 
 // Handles all <Table> to make it responsive

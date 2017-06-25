@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Column, Cell } from 'fixed-data-table'
+import { Column, Cell } from 'fixed-data-table-2'
 import ResponsiveTableWrapper from '../ResponsiveTableWrapper'
 import renderers from '../../modules/renderers'
 
