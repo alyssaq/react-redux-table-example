@@ -3,10 +3,9 @@ const path = require('path')
 const app = express()
 const buildPath = path.join(__dirname, 'build')
 
-app.use(require('compression')())
-app.use(require('body-parser').urlencoded({ extended: false }))
+app.use(require('shrink-ray')())
 app.use(express.static(buildPath))
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   if (req.method === 'GET' && req.accepts('html')) {
     res.sendFile('index.html', {root: buildPath}, function (err) {
       return err && next()
