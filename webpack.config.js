@@ -10,18 +10,18 @@ const assetsLoaders = [{
 }, {
   test: /\.styl$/,
   use: [
-    'style-loader',
-    'css-loader',
+    { loader: 'style-loader', options: { sourceMap: false } },
+    { loader: 'css-loader', options: { sourceMap: false } },
     {
       loader: 'postcss-loader',
       options: {
-        sourceMap: true,
-        plugins: () => [
-          require('autoprefixer')()
-        ]
+        plugins: function () {
+          return [require('autoprefixer')]
+        },
+        sourceMap: false
       }
     },
-    'stylus-loader'
+    { loader: 'stylus-loader', options: { sourceMap: false } }
   ]
 }, {
   test: /\.(ttf|woff|woff2)$/,
